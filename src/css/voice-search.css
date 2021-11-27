@@ -1,0 +1,34 @@
+.voice-search-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.voice-search-container .gradient {
+  height: 10vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom, #a7c0f1 1%, white 99%);
+}
+
+.voice-search-container .content {
+  display: flex;
+  margin-top: 10%;
+  align-items: center;
+  justify-content: space-between;
+  width: 30vw;
+}
+
+.voice-search-container .content .text {
+  font-size: 40px;
+  color: #ededed;
+}
+
+@media only screen and (max-width: 600px) {
+  .voice-search-container .content {
+    width: 80vw;
+  }
+  .index-container .logo {
+    margin-top: 20vh;
+  }
+}

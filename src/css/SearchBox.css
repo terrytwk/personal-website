@@ -1,0 +1,104 @@
+.search-box-container {
+  margin-top: 15px;
+  border-radius: 10px;
+  border-radius: 30px;
+  width: 35vw;
+}
+.search-box-container:focus-within {
+  border-radius: 10px;
+  border: 1px solid #dee1e5;
+}
+
+.search-box-container .history-container {
+  visibility: hidden;
+}
+.search-box-container:focus-within .history-container {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+}
+
+.search-box-container .history-container .history {
+  display: flex;
+  align-items: center;
+  padding: 3px 5px 3px 20px;
+  height: 40px;
+  text-decoration: none;
+  color: black;
+}
+.search-box-container .history-container .history-text {
+  padding-left: 15px;
+}
+.search-box-container .history-container .history:hover {
+  background-color: #ededed;
+}
+
+.search-box-inner-container {
+  display: flex;
+  border: 1px solid #dee1e5;
+  border-radius: 30px;
+  align-items: center;
+  width: 100wh;
+  height: 40px;
+  padding: 1px 20px 1px 20px;
+}
+.search-box-inner-container:focus-within {
+  border: none;
+}
+
+.search-box-inner-container .input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.search-box-inner-container .input-container .search-input {
+  font-size: 16px;
+  border: none;
+  outline-style: none;
+  width: 100%;
+  padding-left: 15px;
+}
+
+.search-box-container .welcome-message {
+  font-size: 18px;
+  padding-left: 15px;
+  white-space: nowrap;
+}
+
+.search-box-container .horizontal-rule {
+  width: 95%;
+  align-self: center;
+  height: 0.5px;
+  background-color: #dee1e5;
+  border-radius: 100px;
+}
+
+.search-box-container .buttons-container {
+  display: flex;
+  justify-content: center;
+}
+.search-box-container .buttons-container .instruction-button {
+  position: sticky;
+  margin-top: 20px;
+  background-color: #f8f9fa;
+  padding: 10px 20px 10px 20px;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
+  border-radius: 5px;
+  /* to prevent adjusting when we add border on hover */
+  border: 1px solid white;
+}
+.search-box-container .buttons-container .instruction-button:hover {
+  cursor: pointer;
+  border: 1px solid #dee1e5;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.search-box-container:focus-within .instruction-button {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .search-box-container {
+    width: 95vw;
+  }
+}
