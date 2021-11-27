@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-resume-js-d0ddc9f0debd900cd6e5.js","mappings":"kJAMA,UAJe,WACb,OAAO","sources":["webpack://terrytwk.github.io/./src/pages/resume.js"],"sourcesContent":["import React from \"react\";\n\nconst Resume = () => {\n  return <div>Resume</div>;\n};\n\nexport default Resume;\n"],"names":[],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-adventure-js-be61a66161b13ec0967c.js","mappings":"kJAMA,UAJkB,WAChB,OAAO","sources":["webpack://terrytwk.github.io/./src/pages/adventure.js"],"sourcesContent":["import React from \"react\";\n\nconst Adventure = () => {\n  return <div>Adventure</div>;\n};\n\nexport default Adventure;\n"],"names":[],"sourceRoot":""}
