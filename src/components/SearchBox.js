@@ -85,7 +85,7 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled }) => {
           <Link
             className="history"
             key={i}
-            to={`/${page.toLowerCase().replace(" ", "")}`}
+            to={`/${page.toLowerCase().replace(" ", "-")}`}
           >
             <AiOutlineClockCircle color="grey" />{" "}
             <span className="history-text">{page}</span>
