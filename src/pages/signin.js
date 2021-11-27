@@ -53,7 +53,7 @@ const Signin = () => {
               onClick={handleSubmit}
               onKeyDown={handleSubmit}
               role="button"
-              tabindex="0"
+              tabIndex="0"
             >
               Submit
             </div>

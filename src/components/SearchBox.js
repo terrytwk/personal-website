@@ -41,7 +41,7 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled }) => {
       onClick={() => setTyping(false)}
       onKeyDown={() => setTyping(false)}
       role="button"
-      tabindex="0"
+      tabIndex="0"
     >
       <div className="search-box-inner-container" id="search-tour">
         <AiOutlineSearch size={20} />
@@ -71,7 +71,7 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled }) => {
           className="instruction-button"
           onClick={() => setStepsEnabled(!stepsEnabled)}
           onKeyDown={() => setStepsEnabled(!stepsEnabled)}
-          tabindex="0"
+          tabIndex="0"
           role="button"
         >
           How to Use
