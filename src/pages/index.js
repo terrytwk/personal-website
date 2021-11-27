@@ -15,8 +15,9 @@ const IndexPage = () => {
 
   // for guided tour
   const [stepsEnabled, setStepsEnabled] = useState(false);
-  const [initialStep, setInitialStep] = useState(0);
-  const [steps, setSteps] = useState([
+  const initialStep = 0;
+  // const [initialStep, setInitialStep] = useState(0);
+  const steps = [
     { element: "#tmail-tour", intro: "Send email to Terry using Tmail." },
     { element: "#links-tour", intro: "Checkout Terry's links." },
     {
@@ -24,7 +25,7 @@ const IndexPage = () => {
       intro: "Let Terry know you visited his website.",
     },
     { element: "#search-tour", intro: "Search about Terry." },
-  ]);
+  ];
 
   return (
     <div className="index-container">

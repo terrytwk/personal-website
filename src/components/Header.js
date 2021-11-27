@@ -5,16 +5,22 @@ import { Link } from "gatsby";
 import { CgMenuGridO } from "@react-icons/all-files/cg/CgMenuGridO";
 
 const Header = ({ dropdownShow, setDropdownShow }) => {
+  const handleMenuClick = () => {
+    setDropdownShow(!dropdownShow);
+  };
   return (
     <div className="header-container">
       <a className="text" id="tmail-tour" href="mailto:terrytwk@mit.edu">
         Tmail
       </a>
-      <Link className="text">Images</Link>
+      {/* <Link className="text">Images</Link> */}
       <div
         className="menu-icon"
         id="links-tour"
-        onClick={() => setDropdownShow(!dropdownShow)}
+        onClick={handleMenuClick}
+        onKeyDown={handleMenuClick}
+        role="button"
+        tabIndex="0"
       >
         <CgMenuGridO size={25} color="#5f6367" />
       </div>

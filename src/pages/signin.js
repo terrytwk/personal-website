@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { navigate } from "gatsby";
 import "../css/signin.css";
 import terry_logo from "../images/terry_logo.png";
 
@@ -49,7 +48,13 @@ const Signin = () => {
               value={comments}
               onChange={(event) => setComments(event.target.value)}
             />
-            <div className="submit" onClick={() => handleSubmit()}>
+            <div
+              className="submit"
+              onClick={handleSubmit}
+              onKeyDown={handleSubmit}
+              role="button"
+              tabindex="0"
+            >
               Submit
             </div>
           </>
