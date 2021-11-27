@@ -17,6 +17,9 @@
   flex-direction: column;
   visibility: visible;
 }
+.search-box-container:focus-within .search-box-inner-container {
+  border: none;
+}
 
 .search-box-container .history-container .history {
   display: flex;
