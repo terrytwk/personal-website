@@ -29,12 +29,15 @@ const IndexPage = () => {
 
   return (
     <div className="index-container">
-      <Steps
-        enabled={stepsEnabled}
-        steps={steps}
-        initialStep={initialStep}
-        onExit={() => setStepsEnabled(false)}
-      />
+      {/* condition to avoid error "document is undefined" when running `gatsby build` */}
+      {typeof window !== "undefined" ? (
+        <Steps
+          enabled={stepsEnabled}
+          steps={steps}
+          initialStep={initialStep}
+          onExit={() => setStepsEnabled(false)}
+        />
+      ) : null}
       <OutsideClickHandler onOutsideClick={() => setDropdownShow(false)}>
         <Header dropdownShow={dropdownShow} setDropdownShow={setDropdownShow} />
         {dropdownShow ? <DropdownMenu /> : null}
