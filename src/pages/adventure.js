@@ -1,7 +1,16 @@
 import React from "react";
 
+import { Helmet } from "react-helmet";
+
 const Adventure = () => {
-  return <div>Adventure</div>;
+  return (
+    <div>
+      <Helmet>
+        <title>adventure - Terry Search</title>
+      </Helmet>
+      Adventure
+    </div>
+  );
 };
 
 export default Adventure;
