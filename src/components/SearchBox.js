@@ -74,7 +74,7 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled }) => {
   };
 
   return (
-    <div className="container">
+    <>
       <div
         className="search-box-container"
         onClick={() => setTyping(false)}
@@ -116,7 +116,7 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled }) => {
           How to Use
         </div>
       ) : null}
-    </div>
+    </>
   );
 };
 
