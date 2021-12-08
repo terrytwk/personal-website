@@ -31,7 +31,7 @@ const SearchBoxInput = ({
 }) => {
   return (
     <div className="input-container" id="search-tour">
-      <AiOutlineSearch size={20} color="rgba(0,0,0,0.4)" />
+      <AiOutlineSearch size={23} color="rgba(0,0,0,0.4)" />
       <input
         className="input"
         onFocus={() => setFocused(true)}
