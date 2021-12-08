@@ -31,7 +31,7 @@ const SearchBoxInput = ({
 }) => {
   return (
     <div className="input-container" id="search-tour">
-      <AiOutlineSearch size={20} />
+      <AiOutlineSearch size={20} color="rgba(0,0,0,0.4)" />
       <input
         className="input"
         onFocus={() => setFocused(true)}
@@ -46,7 +46,11 @@ const SearchBoxInput = ({
         onKeyPress={handleSubmit}
       />
       <Link to="/voice-search">
-        <BiMicrophone size={20} color="black" data-tip="Search by voice" />
+        <BiMicrophone
+          size={20}
+          color="rgba(0,0,0,0.4)"
+          data-tip="Search by voice"
+        />
         <ReactTooltip place="bottom" effect="solid" />
       </Link>
     </div>
