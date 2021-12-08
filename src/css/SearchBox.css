@@ -68,8 +68,8 @@
 
 .welcome-message {
   position: absolute;
-  padding-left: 30px;
-  padding-top: 10px;
+  padding-left: 50px;
+  padding-top: 12px;
   font-size: 18px;
 }
 
@@ -93,9 +93,5 @@
 @media only screen and (max-width: 600px) {
   .search-box-container {
     width: 90vw;
-  }
-  .welcome-message {
-    padding-left: 50px;
-    padding-top: 12px;
   }
 }
