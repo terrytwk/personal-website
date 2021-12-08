@@ -5,7 +5,6 @@
   border-radius: 30px;
   width: 550px;
   border: 1px solid #dee1e5;
-  padding: 1px 20px 1px 20px;
 }
 .search-box-container:hover {
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1);
@@ -27,6 +26,7 @@
 .input-container {
   display: flex;
   align-items: center;
+  padding: 1px 20px 1px 20px;
 }
 .input-container .input {
   font-size: 16px;
@@ -50,9 +50,13 @@
   height: 40px;
   text-decoration: none;
   color: black;
+  padding: 1px 20px 1px 20px;
+}
+.search-box-container .history-container .history:hover {
+  background-color: #ededed;
 }
 .search-box-container .history-container .horizontal-rule {
-  width: 100%;
+  width: 95%;
   align-self: center;
   height: 0.5px;
   background-color: #dee1e5;
