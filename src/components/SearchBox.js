@@ -90,7 +90,9 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled }) => {
         />
         {typing ? <WelcomeMessage /> : null}
         <div className="history-container">
-          <div className="horizontal-rule"></div>
+          {pageSuggestions.length ? (
+            <div className="horizontal-rule"></div>
+          ) : null}
           {pageSuggestions.map((page, i) => (
             <Link
               className="history"
@@ -115,63 +117,6 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled }) => {
         </div>
       ) : null}
     </div>
-    // <div
-    //   className="search-box-default"
-    // onClick={() => setTyping(false)}
-    // onKeyDown={() => setTyping(false)}
-    // role="button"
-    // tabIndex="0"
-    // >
-    //   <div className="search-box-inner-container" id="search-tour">
-    //     <AiOutlineSearch size={20} />
-    //     <div className="input-container">
-    //       {typing ? <WelcomeMessage /> : null}
-    //       <input
-    //         className="search-input"
-    //         type="text"
-    //         onChange={(event) => {
-    //           setPageSuggestions(
-    //             pages.filter((page) =>
-    //               page.toLowerCase().includes(event.target.value.toLowerCase())
-    //             )
-    //           );
-    //         }}
-    //         onKeyPress={handleSubmit}
-    //       />
-    //     </div>
-    //     <Link to="/voice-search">
-    //       <BiMicrophone size={20} color="black" data-tip="Search by voice" />
-    //       <ReactTooltip place="bottom" effect="solid" />
-    //     </Link>
-    //   </div>
-
-    //   <div className="buttons-container">
-    //     <div
-    //       className="instruction-button"
-    //       onClick={() => setStepsEnabled(!stepsEnabled)}
-    //       onKeyDown={() => setStepsEnabled(!stepsEnabled)}
-    //       tabIndex="0"
-    //       role="button"
-    //     >
-    //       How to Use
-    //     </div>
-    //   </div>
-
-    //   <div className="history-container">
-    //     <div className="horizontal-rule"></div>
-
-    //     {pageSuggestions.map((page, i) => (
-    //       <Link
-    //         className="history"
-    //         key={i}
-    //         to={`/${page.toLowerCase().replace(" ", "-")}`}
-    //       >
-    //         <AiOutlineClockCircle color="grey" />{" "}
-    //         <span className="history-text">{page}</span>
-    //       </Link>
-    //     ))}
-    //   </div>
-    // </div>
   );
 };
 

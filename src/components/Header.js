@@ -22,7 +22,7 @@ const Header = ({ dropdownShow, setDropdownShow }) => {
         role="button"
         tabIndex="0"
       >
-        <CgMenuGridO size={25} color="#5f6367" />
+        <CgMenuGridO size={24} color="#5f6367" />
       </div>
       <Link className="sign-in" id="signin-tour" type="button" to="/signin">
         Sign In
