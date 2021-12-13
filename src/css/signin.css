@@ -40,7 +40,6 @@
   padding: 12px 23px;
   border-radius: 5px;
   align-self: flex-end;
-  margin-top: 25px;
 }
 .signin-container .signin-inner-container .submit:hover {
   background-color: #0062be;
@@ -50,10 +49,17 @@
   opacity: 0.7;
 }
 
+.signin-container .signin-inner-container .error-message {
+  color: red;
+}
+
 .signin-container .signin-inner-container .submitted-message {
-  color: green;
+  display: flex;
   margin-top: 100px;
   font-size: 20px;
+}
+.signin-container .signin-inner-container .submitted-message .text {
+  margin-left: 10px;
 }
 
 @media only screen and (max-width: 600px) {
