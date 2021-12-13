@@ -79,7 +79,7 @@ const Signin = () => {
               onChange={(event) => setComments(event.target.value)}
             />
             <p className="error-message">{errorMessage}</p>
-            <button
+            <div
               className="submit"
               onClick={handleSubmit}
               onKeyDown={handleSubmit}
@@ -87,7 +87,7 @@ const Signin = () => {
               tabIndex="0"
             >
               Submit
-            </button>
+            </div>
           </>
         ) : (
           <span className="submitted-message">
