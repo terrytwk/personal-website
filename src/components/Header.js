@@ -32,7 +32,6 @@ const Header = ({ onHome = true }) => {
         Sign In
       </Link>
       <OutsideClickHandler onOutsideClick={() => setDropdownShow(false)}>
-        <Header dropdownShow={dropdownShow} setDropdownShow={setDropdownShow} />
         {dropdownShow ? <DropdownMenu /> : null}
       </OutsideClickHandler>
     </div>

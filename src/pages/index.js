@@ -10,8 +10,6 @@ import Header from "../components/Header";
 import SearchBox from "../components/SearchBox";
 
 const IndexPage = () => {
-  const [dropdownShow, setDropdownShow] = useState(false);
-
   // for guided tour
   const [stepsEnabled, setStepsEnabled] = useState(false);
   const initialStep = 0;
@@ -40,10 +38,7 @@ const IndexPage = () => {
           onExit={() => setStepsEnabled(false)}
         />
       ) : null}
-      {/* <OutsideClickHandler onOutsideClick={() => setDropdownShow(false)}> */}
-      <Header dropdownShow={dropdownShow} setDropdownShow={setDropdownShow} />
-      {/* {dropdownShow ? <DropdownMenu /> : null}
-      </OutsideClickHandler> */}
+      <Header />
       <img src={terry_logo} alt="terry_logo" height="15%" className="logo" />
       <SearchBox
         stepsEnabled={stepsEnabled}
