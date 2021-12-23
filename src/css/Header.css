@@ -1,14 +1,12 @@
 .header-container {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 60px;
   font-size: 13px;
-  width: 100vw;
-  z-index: -1;
 }
 .header-container .text {
   margin-right: 15px;
