@@ -9,7 +9,7 @@ import terry_logo from "../images/terry_logo.png";
 const SearchBoxHeader = () => {
   return (
     <div className="search-box-header-container">
-      <Header onHome={false} />
+      {/* <Header onHome={false} /> */}
       <Link to="/">
         <img src={terry_logo} alt="terry_logo" height="40px" className="logo" />
       </Link>
