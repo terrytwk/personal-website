@@ -1,0 +1,10 @@
+.not-found-page-container {
+  margin-top: 10px;
+}
+
+.not-found-page-container .body {
+  position: absolute;
+  top: 60px;
+  z-index: -1;
+  padding: 5% 0 0 10%;
+}

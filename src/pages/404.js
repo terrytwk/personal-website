@@ -1,54 +1,28 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import "../css/404.css";
+import { Link } from "gatsby";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import SearchBoxHeader from "../components/SearchBoxHeader";
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+    <div className="not-found-page-container">
+      <SearchBoxHeader />
+      <div className="body">
+        <p>
+          Your search - guiragreioregjefwijoewfkop - did not match any
+          documents.
+        </p>
+        <p>Suggestions:</p>
+        <ul>
+          <li>About Me</li>
+          <li>Adventure</li>
+          <li>Project</li>
+          <li>Resume</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;

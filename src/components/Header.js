@@ -4,12 +4,12 @@ import { Link } from "gatsby";
 
 import { CgMenuGridO } from "@react-icons/all-files/cg/CgMenuGridO";
 
-const Header = ({ dropdownShow, setDropdownShow }) => {
+const Header = ({ dropdownShow, setDropdownShow, onHome = true }) => {
   const handleMenuClick = () => {
     setDropdownShow(!dropdownShow);
   };
   return (
-    <div className="header-container">
+    <div className="header-container" style={{ top: onHome ? 0 : 20 }}>
       <a className="text" id="tmail-tour" href="mailto:terrytwk@mit.edu">
         Tmail
       </a>

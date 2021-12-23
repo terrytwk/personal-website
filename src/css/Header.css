@@ -8,8 +8,8 @@
   height: 60px;
   font-size: 13px;
   width: 100vw;
+  z-index: -1;
 }
-
 .header-container .text {
   margin-right: 15px;
   text-decoration: none;

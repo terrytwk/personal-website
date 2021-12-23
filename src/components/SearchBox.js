@@ -58,7 +58,7 @@ const SearchBoxInput = ({
 };
 
 // main component
-const SearchBox = ({ stepsEnabled, setStepsEnabled }) => {
+const SearchBox = ({ stepsEnabled, setStepsEnabled, onHome = true }) => {
   const pages = ["About Me", "Adventure", "Project", "Resume"];
 
   const [pageSuggestions, setPageSuggestions] = useState(pages);
@@ -88,7 +88,7 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled }) => {
           handleSubmit={handleSubmit}
           pages={pages}
         />
-        {typing ? <WelcomeMessage /> : null}
+        {typing && onHome ? <WelcomeMessage /> : null}
         <div className="history-container">
           {pageSuggestions.length ? (
             <div className="horizontal-rule"></div>
@@ -105,7 +105,7 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled }) => {
           ))}
         </div>
       </div>
-      {!focused ? (
+      {!focused && onHome ? (
         <div
           className="instruction-button"
           onClick={() => setStepsEnabled(!stepsEnabled)}
