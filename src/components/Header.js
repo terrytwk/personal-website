@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Header.css";
 import { Link } from "gatsby";
 
 import { CgMenuGridO } from "@react-icons/all-files/cg/CgMenuGridO";
+import OutsideClickHandler from "react-outside-click-handler";
+import DropdownMenu from "../components/DropdownMenu";
 
-const Header = ({ dropdownShow, setDropdownShow, onHome = true }) => {
+const Header = ({ onHome = true }) => {
+  const [dropdownShow, setDropdownShow] = useState(false);
+
   const handleMenuClick = () => {
     setDropdownShow(!dropdownShow);
   };
@@ -27,6 +31,10 @@ const Header = ({ dropdownShow, setDropdownShow, onHome = true }) => {
       <Link className="sign-in" id="signin-tour" type="button" to="/signin">
         Sign In
       </Link>
+      <OutsideClickHandler onOutsideClick={() => setDropdownShow(false)}>
+        <Header dropdownShow={dropdownShow} setDropdownShow={setDropdownShow} />
+        {dropdownShow ? <DropdownMenu /> : null}
+      </OutsideClickHandler>
     </div>
   );
 };

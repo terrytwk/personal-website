@@ -3,13 +3,11 @@ import "../css/index.css";
 import terry_logo from "../images/terry_logo.png";
 
 import { Helmet } from "react-helmet";
-import OutsideClickHandler from "react-outside-click-handler";
 import "intro.js/introjs.css";
 import { Steps } from "intro.js-react";
 
 import Header from "../components/Header";
 import SearchBox from "../components/SearchBox";
-import DropdownMenu from "../components/DropdownMenu";
 
 const IndexPage = () => {
   const [dropdownShow, setDropdownShow] = useState(false);
@@ -42,10 +40,10 @@ const IndexPage = () => {
           onExit={() => setStepsEnabled(false)}
         />
       ) : null}
-      <OutsideClickHandler onOutsideClick={() => setDropdownShow(false)}>
-        <Header dropdownShow={dropdownShow} setDropdownShow={setDropdownShow} />
-        {dropdownShow ? <DropdownMenu /> : null}
-      </OutsideClickHandler>
+      {/* <OutsideClickHandler onOutsideClick={() => setDropdownShow(false)}> */}
+      <Header dropdownShow={dropdownShow} setDropdownShow={setDropdownShow} />
+      {/* {dropdownShow ? <DropdownMenu /> : null}
+      </OutsideClickHandler> */}
       <img src={terry_logo} alt="terry_logo" height="15%" className="logo" />
       <SearchBox
         stepsEnabled={stepsEnabled}
