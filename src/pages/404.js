@@ -6,9 +6,9 @@ import SearchBoxHeader from "../components/SearchBoxHeader";
 
 const NotFoundPage = () => {
   return (
-    <div className="not-found-page-container">
+    <div className="not-found-page-container search-page">
       <SearchBoxHeader />
-      <div className="body">
+      <div className="search-content">
         <p>
           Your search - guiragreioregjefwijoewfkop - did not match any
           documents.

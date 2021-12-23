@@ -1,14 +1,16 @@
 import React from "react";
-
 import { Helmet } from "react-helmet";
+
+import SearchBoxHeader from "../components/SearchBoxHeader";
 
 const Resume = () => {
   return (
-    <div>
+    <div className="search-page">
       <Helmet>
         <title>resume - Terry Search</title>
       </Helmet>
-      Resume
+      <SearchBoxHeader />
+      <div className="search-content">Resume</div>
     </div>
   );
 };

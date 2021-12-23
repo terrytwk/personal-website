@@ -3,6 +3,23 @@ body {
   padding: 0;
   font-family: Roboto, system-ui, sans-serif;
 }
+.search-page {
+  margin-top: 10px;
+}
+.search-content {
+  position: absolute;
+  top: 60px;
+  z-index: -1;
+  padding: 5% 0 0 10%;
+}
+
+@media only screen and (max-width: 950px) {
+  .search-content {
+    top: 110px;
+    padding: 5% 3% 0 3%;
+  }
+}
+
 .index-container {
   display: flex;
   flex-direction: column;
