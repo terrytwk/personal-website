@@ -28,6 +28,8 @@ const SearchBoxInput = ({
   pages,
   setPageSuggestions,
   handleSubmit,
+  searchString,
+  setSearchString,
 }) => {
   return (
     <div className="input-container" id="search-tour">
@@ -42,8 +44,10 @@ const SearchBoxInput = ({
               page.toLowerCase().includes(event.target.value.toLowerCase())
             )
           );
+          setSearchString(event.target.value);
         }}
         onKeyPress={handleSubmit}
+        value={searchString}
       />
       <Link to="/voice-search">
         <BiMicrophone
@@ -64,12 +68,16 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled, onHome = true }) => {
   const [pageSuggestions, setPageSuggestions] = useState(pages);
   const [typing, setTyping] = useState(true);
   const [focused, setFocused] = useState(false);
+  const [searchString, setSearchString] = useState("");
 
   const handleSubmit = (event) => {
     if (event.key === "Enter") {
       if (pageSuggestions[0])
         navigate(`/${pageSuggestions[0].toLowerCase().replace(" ", "-")}`);
-      else navigate("/404");
+      else
+        navigate("/404", {
+          state: { searchString },
+        });
     }
   };
 
@@ -87,6 +95,8 @@ const SearchBox = ({ stepsEnabled, setStepsEnabled, onHome = true }) => {
           setPageSuggestions={setPageSuggestions}
           handleSubmit={handleSubmit}
           pages={pages}
+          searchString={searchString}
+          setSearchString={setSearchString}
         />
         {typing && onHome ? <WelcomeMessage /> : null}
         <div className="history-container">

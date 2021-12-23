@@ -4,13 +4,13 @@ import { Link } from "gatsby";
 
 import SearchBoxHeader from "../components/SearchBoxHeader";
 
-const NotFoundPage = () => {
+const NotFoundPage = ({ location }) => {
   return (
     <div className="not-found-page-container search-page">
       <SearchBoxHeader />
       <div className="search-content">
         <p>
-          Your search - guiragreioregjefwijoewfkop - did not match any
+          Your search - {location.state.searchString} - did not match any
           documents.
         </p>
         <p>Suggestions:</p>
