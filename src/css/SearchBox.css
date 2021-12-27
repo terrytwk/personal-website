@@ -5,8 +5,7 @@
   border-radius: 30px;
   width: 575px;
   border: 1px solid #dee1e5;
-  background-color: white;
-  z-index: -2;
+  background-color: transparent;
 }
 .search-box-container:hover {
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1);
@@ -38,7 +37,6 @@
   height: 40px;
   padding-left: 15px;
   background-color: transparent;
-  z-index: 1;
 }
 
 .search-box-container .history-container {
@@ -77,14 +75,13 @@
 }
 
 .instruction-button {
-  position: sticky;
+  /* position: sticky; */
   margin-top: 25px;
   background-color: #f8f9fa;
   padding: 10px 20px 10px 20px;
   color: rgba(0, 0, 0, 0.87);
   font-size: 14px;
   border-radius: 5px;
-  z-index: -1;
   /* to prevent adjusting when we add border on hover */
   border: 1px solid white;
 }
