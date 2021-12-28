@@ -13,32 +13,19 @@ const Signin = () => {
   const [contactInfo, setContactInfo] = useState("");
   const [comments, setComments] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!name && !contactInfo && !comments)
       return setErrorMessage("At least one field is required.");
 
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-    myHeaders.append(
-      "Cookie",
-      "COMPASS=spreadsheet_forms=CjIACWuJVwzzJOgKRV7ZE-eGY8Cz_5qovxPZt5nPgy-cNSBmkvZo4M8KsYsTYHGEU2MQnhCN8tuNBho0AAlriVctfIS1X2wSCQdpNlFwKG1A2jbAcaQVvao6bZ8VVVKV0Asqpa6MtTN_NIOCESoXmA==; S=spreadsheet_forms=1BIBbdvVfUaQP09-x7eGNOR9xRrbnmOp3_WKYbEjJz8; NID=511=GoGE_eUzcXXnU9mU7a19tPjpm7M7r9E5OD73tHAjnwJ9RvhbH76kXEJ-IwEWLd7nBoC4-iw-SpMdYRmTnuSo2wfHEqfEbHEebQ6DVfGpQUYDe8U4DUwNZGxMh6zilo1VKh_FSNKKKHebuApWVnTBUjwSOQyZTbQMV6lW__sp3fw"
-    );
-
-    var urlencoded = new URLSearchParams();
-    urlencoded.append("entry.1774825969", name);
-    urlencoded.append("entry.1421939944", contactInfo);
-    urlencoded.append("entry.1638789278", comments);
-
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: urlencoded,
-      redirect: "follow",
-    };
-
-    fetch(
-      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf9cJpzVlIOXc6lQXEvqvwVZkRcnJws61UbAznuf2WPnnneIg/formResponse",
-      requestOptions
+    await fetch(
+      "https://sheet.best/api/sheets/9edab9ff-e758-4fbe-90e6-7f93e02bf7c2",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, contactInfo, comments }),
+      }
     )
       .then((response) => response.text())
       .then((result) => setSubmitted(true))
@@ -91,7 +78,7 @@ const Signin = () => {
           </>
         ) : (
           <span className="submitted-message">
-            <AiOutlineCheckCircle color="green" size="25}" />
+            <AiOutlineCheckCircle color="green" size="25" />
             <span className="text">Message has been sent!</span>
           </span>
         )}
