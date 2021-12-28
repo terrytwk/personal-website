@@ -10,7 +10,7 @@ const Project = () => {
         <title>project - Terry Search</title>
       </Helmet>
       <SearchBoxHeader />
-      <div className="search-content">Project</div>
+      <div className="search-content">Project Page Coming Soon!</div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const AboutMe = () => {
         <title>about me - Terry Search</title>
       </Helmet>
       <SearchBoxHeader />
-      <div className="search-content">AboutMe</div>
+      <div className="search-content">AboutMe Page Coming Soon!</div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Resume = () => {
         <title>resume - Terry Search</title>
       </Helmet>
       <SearchBoxHeader />
-      <div className="search-content">Resume</div>
+      <div className="search-content">Resume Page Coming Soon!</div>
     </div>
   );
 };

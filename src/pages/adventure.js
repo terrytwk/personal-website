@@ -10,7 +10,7 @@ const Adventure = () => {
         <title>adventure - Terry Search</title>
       </Helmet>
       <SearchBoxHeader />
-      <div className="search-content">Adventure</div>
+      <div className="search-content">Adventure Page Coming Soon!</div>
     </div>
   );
 };
