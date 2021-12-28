@@ -42,6 +42,7 @@
 .search-box-container .history-container {
   display: none;
   flex-direction: column;
+  margin-bottom: 15px;
 }
 .search-box-container .history-container .history {
   display: flex;
