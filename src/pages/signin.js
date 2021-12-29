@@ -17,16 +17,13 @@ const Signin = () => {
     if (!name && !contactInfo && !comments)
       return setErrorMessage("At least one field is required.");
 
-    await fetch(
-      "https://sheet.best/api/sheets/9edab9ff-e758-4fbe-90e6-7f93e02bf7c2",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, contactInfo, comments }),
-      }
-    )
+    await fetch(process.env.GATSBY_GOOGLE_SHEET_API, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, contactInfo, comments }),
+    })
       .then((response) => response.text())
       .then((result) => setSubmitted(true))
       .catch((error) =>
